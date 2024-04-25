@@ -1,7 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-
 // import PrivateRoute from "./PrivateRoute";
 // import Error from "../pages/Error/Error";
+import Home from "../Pages/Home/Home";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+import AllItems from "../Pages/AllItems/AllItems";
+import AddItems from "../Pages/AddItems/AddItems";
+import MyList from "../Pages/MyList/MyList";
+import Root from "../layouts/Root/Root";
 
 const router = createBrowserRouter([
   {
@@ -12,17 +18,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/land.json"),
-      },
-
-      {
-        path: "/update",
-        element:
-          //   <PrivateRoute>
-          {
-            /* <UpdateProfile></UpdateProfile> */
-          },
-        //   </PrivateRoute>
       },
       {
         path: "/login",
