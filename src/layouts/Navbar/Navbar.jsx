@@ -1,7 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaPaintBrush } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    logOut().then().catch();
+    toast.success("Logged Out Successfully");
+  };
   const navLinks2 = (
     <>
       <li>
@@ -134,7 +143,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal flex gap-6">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {/* {user && user.photoURL ? (
+        {user && user.photoURL ? (
           <>
             <div className="dropdown dropdown-hover mr-2">
               <div
@@ -142,7 +151,7 @@ const Navbar = () => {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full border-[#05386B] border-2">
+                <div className="w-9 rounded-full border-[#f9a06f] border-2">
                   <img
                     alt="Tailwind CSS Navbar component"
                     src={user.photoURL}
@@ -151,34 +160,43 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[20] p-2 shadow menu menu-sm dropdown-content bg-[#379683] font-semibold  text-[#05386B]  w-40 right-2 lg:right-[-55px] rounded-box "
+                className="mt-3 z-[20] p-2 shadow menu menu-sm dropdown-content bg-[#f9a06f] font-semibold  text-[#1e1b4b]  w-40 right-2 lg:right-[-55px] rounded-box "
               >
                 <li>
                   <a className="justify-between">{user.displayName}</a>
                 </li>
                 <li className="lg:hidden">
                   <div className="flex justify-center">
-                    <a className="btn font-semibold bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] border-none hover:text-[#EDF5E1]">
+                    <button
+                      onClick={handleSignOut}
+                      className="font-bold rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+                    >
+                      <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+                      <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
                       Sign Out
-                    </a>
+                    </button>
                   </div>
                 </li>
               </ul>
             </div>
-            <a className="btn hidden lg:flex font-semibold bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] border-none hover:text-[#EDF5E1]">
+            <button
+              onClick={handleSignOut}
+              className="font-bold rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+            >
+              <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+              <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
               Sign Out
-            </a>
+            </button>
           </>
-        ) : ( */}
-        <Link to="/login">
-          <button className="font-bold rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
-            <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
-            <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
-            Login
-          </button>
-        </Link>
-
-        {/* )} */}
+        ) : (
+          <Link to="/login">
+            <button className="font-bold rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
+              <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+              <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

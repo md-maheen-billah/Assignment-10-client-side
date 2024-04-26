@@ -1,11 +1,49 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
-import { FaGoogle, FaGithub } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { createUser, updateUser, setUser } = useContext(AuthContext);
   const [showPass, setShowPass] = useState(false);
+  const navigate = useNavigate();
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const image = form.image.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    if (password.length < 6) {
+      toast.error("Password should be at least 6 characters of more");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("Your password should have at least 1 Upper Case character");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.error("Your password should have at least 1 Lower Case character");
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateUser(name, image)
+          .then(() => {
+            setUser({ displayName: name, photoURL: image, email: email });
+            navigate("/");
+          })
+          .catch();
+        toast.success("Registered Successfully");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div className="flex justify-center items-center mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
       <div>
@@ -13,7 +51,7 @@ const Register = () => {
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
             Register An Account
           </h2>
-          <form className="mt-4 space-y-4">
+          <form onSubmit={handleRegister} className="mt-4 space-y-4">
             <div className="">
               <label className="text-[#1e1b4b] font-semibold" htmlFor="name">
                 Name:
