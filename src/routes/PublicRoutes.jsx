@@ -9,6 +9,8 @@ import AddItems from "../Pages/AddItems/AddItems";
 import MyList from "../Pages/MyList/MyList";
 import Root from "../layouts/Root/Root";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateItems from "../Pages/UpdateItems/UpdateItems";
+import ItemDetails from "../Pages/ItemDetails/ItemDetails";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <AddItems></AddItems>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/updateitems/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateItems></UpdateItems>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/itemdetails/:id",
+        element: (
+          <PrivateRoutes>
+            <ItemDetails></ItemDetails>
           </PrivateRoutes>
         ),
       },
