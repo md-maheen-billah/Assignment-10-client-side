@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const AddItems = () => {
   const { user } = useContext(AuthContext);
@@ -43,6 +44,9 @@ const AddItems = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data?.insertedId) {
+          toast.success("Item Added Successfully");
+        }
       });
   };
 
