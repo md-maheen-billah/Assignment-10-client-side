@@ -15,6 +15,8 @@ const AddItems = () => {
     const customization = form.customization.value;
     const processing_time = form.processing_time.value;
     const stockStatus = form.stockStatus.value;
+    const email = user.email;
+    const name = user.displayName;
 
     const newItem = {
       image,
@@ -26,13 +28,26 @@ const AddItems = () => {
       customization,
       processing_time,
       stockStatus,
+      email,
+      name,
     };
 
     console.log(newItem);
+    fetch("http://localhost:5000/addItems", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItem),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
-    <div className="mt-4 mb-8 lg:my-16 ">
+    <div className="mt-4 mb-8 lg:my-8 ">
       <h2 className="text-center text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
         Add Item
       </h2>
@@ -132,6 +147,7 @@ const AddItems = () => {
               maxLength={5}
               max={5}
               min={0}
+              step=".01"
               type="number"
               placeholder="Enter Rating"
               id="rating"
@@ -167,11 +183,11 @@ const AddItems = () => {
             </label>
             <input
               className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
-              type="number"
+              type="text"
               id="processing_time"
               name="processing_time"
               required
-              placeholder="Enter Processing Time"
+              placeholder="Enter Processing Time mentioning days/hours (example: 1-2 days)"
             />
           </div>
         </div>
