@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaTree } from "react-icons/fa6";
+import { FaPaintBrush } from "react-icons/fa";
 
 const Navbar = () => {
   const navLinks2 = (
@@ -9,7 +9,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? " border-2 border-[#05386B] text-[#5CDB95] px-4 bg-[#05386B] hover:bg-[#5CDB95] focus:text-[#5CDB95] focus:bg-[#05386B] py-2 rounded-xl font-bold"
+              ? " border-2 border-[#05386B] text-[#5CDB95] px-4 bg-[#05386B] hover:text-[#5CDB95] focus:text-[#5CDB95] py-2font-bold"
               : "text-[#05386B] font-semibold  px-4 py-2  rounded-xl hover:bg-[#379683] hover:text-[#EDF5E1] hover:duration-200"
           }
         >
@@ -49,8 +49,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? " border-2 border-[#05386B] focus:hover:bg-[#379683] focus:hover:text-[#EDF5E1] focus:hover:border-[#379683] hover:border-[#379683] hover:text-[#EDF5E1] bg-[#05386B] focus:text-[#5CDB95] focus:bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] px-4  py-2 rounded-xl font-bold"
-              : "text-[#05386B] font-semibold border-2 border-[#5CDB95] bg-[#5CDB95] px-4 py-2  rounded-xl hover:bg-[#379683] hover:border-[#379683] hover:text-[#EDF5E1]  hover:duration-200"
+              ? " rounded-none focus:outline-none active:bg-[#fff4ed] border-b-2 border-b-[#f9a06f] hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-b-4-[#f9a06f]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#f9a06f] font-bold pb-1 px-1"
+              : "rounded-none border-b-2 border-b-[#fff4ed]  hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-[#fff4ed]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#1e1b4b] font-bold hover:duration-200 pb-1 px-1"
           }
         >
           Home
@@ -61,8 +61,8 @@ const Navbar = () => {
           to="/allitems"
           className={({ isActive }) =>
             isActive
-              ? " border-2 border-[#05386B] focus:hover:bg-[#379683] focus:hover:text-[#EDF5E1] focus:hover:border-[#379683] hover:border-[#379683] hover:text-[#EDF5E1] bg-[#05386B] focus:text-[#5CDB95] focus:bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] px-4  py-2 rounded-xl font-bold"
-              : "text-[#05386B] font-semibold border-2 border-[#5CDB95] bg-[#5CDB95] px-4 py-2  rounded-xl hover:bg-[#379683] hover:border-[#379683] hover:text-[#EDF5E1]  hover:duration-200"
+              ? " rounded-none border-b-2 border-b-[#f9a06f] hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-b-4-[#f9a06f]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#f9a06f] font-bold pb-1 px-1"
+              : "rounded-none border-b-2 border-b-[#fff4ed]  hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-[#fff4ed]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#1e1b4b] font-bold hover:duration-200 pb-1 px-1"
           }
         >
           All Art & Craft Items
@@ -73,8 +73,8 @@ const Navbar = () => {
           to="/additems"
           className={({ isActive }) =>
             isActive
-              ? " border-2 border-[#05386B] focus:hover:bg-[#379683] focus:hover:text-[#EDF5E1] focus:hover:border-[#379683] hover:border-[#379683] hover:text-[#EDF5E1] bg-[#05386B] focus:text-[#5CDB95] focus:bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] px-4  py-2 rounded-xl font-bold"
-              : "text-[#05386B] font-semibold border-2 border-[#5CDB95] bg-[#5CDB95] px-4 py-2  rounded-xl hover:bg-[#379683] hover:border-[#379683] hover:text-[#EDF5E1]  hover:duration-200"
+              ? " rounded-none border-b-2 border-b-[#f9a06f] hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-b-4-[#f9a06f]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#f9a06f] font-bold pb-1 px-1"
+              : "rounded-none border-b-2 border-b-[#fff4ed]  hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-[#fff4ed]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#1e1b4b] font-bold hover:duration-200 pb-1 px-1"
           }
         >
           Add Craft Item
@@ -85,8 +85,8 @@ const Navbar = () => {
           to="/mylist"
           className={({ isActive }) =>
             isActive
-              ? " border-2 border-[#05386B] focus:hover:bg-[#379683] focus:hover:text-[#EDF5E1] focus:hover:border-[#379683] hover:border-[#379683] hover:text-[#EDF5E1] bg-[#05386B] focus:text-[#5CDB95] focus:bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] px-4  py-2 rounded-xl font-bold"
-              : "text-[#05386B] font-semibold border-2 border-[#5CDB95] bg-[#5CDB95] px-4 py-2  rounded-xl hover:bg-[#379683] hover:border-[#379683] hover:text-[#EDF5E1]  hover:duration-200"
+              ? " rounded-none border-b-2 border-b-[#f9a06f] hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-b-4-[#f9a06f]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#f9a06f] font-bold pb-1 px-1"
+              : "rounded-none border-b-2 border-b-[#fff4ed]  hover:bg-[#fff4ed] focus:hover:bg-[#fff4ed] focus:hover:text-[#f9a06f] focus:hover:border-[#fff4ed]  hover:text-[#f9a06f]  focus:text-[#f9a06f] focus:bg-[#fff4ed] text-[#1e1b4b] font-bold hover:duration-200 pb-1 px-1"
           }
         >
           My Art & Craft List
@@ -99,7 +99,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className=" lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -124,13 +124,14 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="btn btn-ghost text-2xl font-extrabold text-[#05386B] p-0 "
+          className="btn btn-ghost text-2xl font-extrabold text-[#1e1b4b] p-0 "
         >
-          Terra Scope <FaTree />
+          Canvas <span className="text-[#f9a06f]">Isle</span>{" "}
+          <FaPaintBrush className="text-[#f9a06f]" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal flex gap-6">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         {/* {user && user.photoURL ? (
@@ -170,7 +171,7 @@ const Navbar = () => {
           </>
         ) : ( */}
         <Link to="/login">
-          <button className="btn font-semibold bg-[#05386B] hover:bg-[#379683] text-[#5CDB95] border-none hover:text-[#EDF5E1]">
+          <button className=" px-4 hover:scale-105 py-2 font-bold rounded-md  bg-[#f9a06f] hover:bg-[#fac0a1] text-[#1e1b4b] border-none hover:text-[#1e1b4b] hover:duration-700">
             Login
           </button>
         </Link>
