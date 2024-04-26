@@ -8,6 +8,7 @@ import AllItems from "../Pages/AllItems/AllItems";
 import AddItems from "../Pages/AddItems/AddItems";
 import MyList from "../Pages/MyList/MyList";
 import Root from "../layouts/Root/Root";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -29,11 +30,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/additems",
-        element: <AddItems></AddItems>,
+        element: (
+          <PrivateRoutes>
+            <AddItems></AddItems>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/mylist",
-        element: <MyList></MyList>,
+        element: (
+          <PrivateRoutes>
+            <MyList></MyList>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/register",

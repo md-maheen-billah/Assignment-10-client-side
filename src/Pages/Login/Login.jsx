@@ -1,11 +1,58 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { signInUser, googleSignIn, gitSignIn } = useContext(AuthContext);
   const [showPass, setShowPass] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Logged In");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.error(error);
+      });
+  };
+
+  const handleGoogle = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Logged In");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleGit = () => {
+    gitSignIn()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully Logged In");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="flex justify-center items-center mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
       <div>
@@ -13,7 +60,7 @@ const Login = () => {
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
             Login Your Account
           </h2>
-          <form className="mt-4 space-y-4">
+          <form onSubmit={handleLogin} className="mt-4 space-y-4">
             <div className="">
               <label className="text-[#1e1b4b] font-semibold" htmlFor="email">
                 Email Address:
@@ -75,14 +122,20 @@ const Login = () => {
             <div className="h-px bg-[#EDF5E1] w-full"></div>
           </div>
           <div>
-            <button className="font-bold flex items-center justify-center gap-2 w-full rounded-md px-4 py-2 bg-[#1e1b4b] text-[#f9a06f] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
+            <button
+              onClick={handleGoogle}
+              className="font-bold flex items-center justify-center gap-2 w-full rounded-md px-4 py-2 bg-[#1e1b4b] text-[#f9a06f] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+            >
               <span className="absolute bg-[#ffede2]  size-80 rounded-full group-hover:scale-150 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
               <span className="absolute bg-[#fac0a1] size-80 -left-2 -top-10 rounded-full group-hover:scale-150 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
               <FaGoogle /> Login using Google
             </button>
           </div>
           <div className="mt-5">
-            <button className="font-bold flex items-center justify-center gap-2 w-full rounded-md px-4 py-2 bg-[#1e1b4b] text-[#f9a06f] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
+            <button
+              onClick={handleGit}
+              className="font-bold flex items-center justify-center gap-2 w-full rounded-md px-4 py-2 bg-[#1e1b4b] text-[#f9a06f] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+            >
               <span className="absolute bg-[#ffede2]  size-80 rounded-full group-hover:scale-150 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
               <span className="absolute bg-[#fac0a1] size-80 -left-2 -top-10 rounded-full group-hover:scale-150 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
               <FaGithub /> Login using Github
