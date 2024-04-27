@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { VscTriangleLeft } from "react-icons/vsc";
 
 const UpdateItems = () => {
   const { id } = useParams();
@@ -54,10 +55,20 @@ const UpdateItems = () => {
       });
   };
   return (
-    <div className="mt-4 mb-8 lg:my-8 ">
-      <h2 className="text-center text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
-        Update Item
-      </h2>
+    <div className="mt-4 mb-8 lg:my-6 ">
+      <div className="flex items-center justify-between">
+        <Link to="/mylist">
+          <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
+            <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+            <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
+            <VscTriangleLeft />
+          </button>
+        </Link>
+        <h2 className="text-center mt-2 text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
+          Update Item
+        </h2>
+        <div className="w-10"></div>
+      </div>
       <form onSubmit={handleUpdate} className="mt-4 space-y-3">
         <div className="flex gap-8">
           <div className="w-1/2">
