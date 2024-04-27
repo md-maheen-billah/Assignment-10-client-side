@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const AllItemCard = ({ item }) => {
   return (
     <div>
-      <div className="flex mx-auto flex-col">
+      <div className="flex mx-auto flex-col hover:scale-105 transition shadow-xl ">
         <div className="relative">
           <img className="lg:h-64 md:h-64 w-full" src={item.image} alt="" />
           <div className="animate__animated badge  rounded-3xl animate__slower animate__swing animate__infinite font-medium bg-[#f9a06f] border-[#f9a06f] text-[#1e1b4b] absolute top-4 left-4 ">
@@ -54,6 +55,9 @@ const AllItemCard = ({ item }) => {
       </div>
     </div>
   );
+};
+AllItemCard.propTypes = {
+  item: PropTypes.object,
 };
 
 export default AllItemCard;
