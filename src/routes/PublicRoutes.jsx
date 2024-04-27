@@ -11,6 +11,8 @@ import Root from "../layouts/Root/Root";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateItems from "../Pages/UpdateItems/UpdateItems";
 import ItemDetails from "../Pages/ItemDetails/ItemDetails";
+import OilPainting from "../Pages/Categories/OilPainting";
+import LandscapePainting from "../Pages/Categories/LandscapePainting";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
             <MyList></MyList>
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/oilpaintings",
+        element: <OilPainting></OilPainting>,
+      },
+      {
+        path: "/landscapepaintings",
+        element: <LandscapePainting></LandscapePainting>,
       },
       {
         path: "/register",

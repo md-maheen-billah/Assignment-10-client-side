@@ -34,7 +34,7 @@ const AddItems = () => {
     };
 
     console.log(newItem);
-    fetch("http://localhost:5000/addItems", {
+    fetch("https://server-side-eight-eosin.vercel.app/addItems", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -51,14 +51,17 @@ const AddItems = () => {
   };
 
   return (
-    <div className="mt-4 mb-8 lg:my-8 ">
-      <h2 className="text-center text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
+    <div className="mt-4 mb-8  lg:my-8 ">
+      <h2 className="text-center text-2xl font-bold text-primary animate__animated animate__headShake  animate__slow animate__infinite">
         Add Item
       </h2>
       <form onSubmit={handleAddItem} className="mt-4 space-y-3">
         <div className="flex gap-8">
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="item_name">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="item_name"
+            >
               Item Name:
             </label>
             <input
@@ -71,7 +74,10 @@ const AddItems = () => {
             />
           </div>
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="image">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
+              htmlFor="image"
+            >
               Image URL:
             </label>
             <input
@@ -87,13 +93,13 @@ const AddItems = () => {
         <div className="flex gap-8">
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
               htmlFor="subcategory_Name"
             >
               Subcategory Name:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black  p-2 rounded-md w-full bg-[#ffede2]"
               id="subcategory_Name"
               name="subcategory_Name"
               placeholder="Select Subcategory"
@@ -111,13 +117,13 @@ const AddItems = () => {
           </div>
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
               htmlFor="stockStatus"
             >
               Stock Status:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black  p-2 rounded-md w-full bg-[#ffede2]"
               id="stockStatus"
               name="stockStatus"
               placeholder="Select Stock"
@@ -130,7 +136,10 @@ const AddItems = () => {
         </div>
         <div className="flex gap-8">
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="price">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="price"
+            >
               Price:
             </label>
             <input
@@ -143,7 +152,10 @@ const AddItems = () => {
             />
           </div>
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="rating">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="rating"
+            >
               Rating:
             </label>
             <input
@@ -162,13 +174,13 @@ const AddItems = () => {
         <div className="flex gap-8">
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="customization"
             >
               Customization:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               id="customization"
               name="customization"
               placeholder="Select Customization"
@@ -180,7 +192,7 @@ const AddItems = () => {
           </div>
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="processing_time"
             >
               Processing Time:
@@ -196,7 +208,10 @@ const AddItems = () => {
           </div>
         </div>
         <div className="">
-          <label className="text-[#1e1b4b] font-semibold" htmlFor="description">
+          <label
+            className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+            htmlFor="description"
+          >
             Short Description:
           </label>
           <textarea
@@ -210,11 +225,14 @@ const AddItems = () => {
         </div>
         <div className="flex gap-8">
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="name">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="name"
+            >
               User Name:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="name"
               name="name"
@@ -224,18 +242,21 @@ const AddItems = () => {
             />
           </div>
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="email">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="email"
+            >
               User Email:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black  p-2 rounded-md w-full bg-[#ffede2]"
               type="email"
               id="email"
               name="email"
               defaultValue={user.email}
               readOnly
               required
-              placeholder="Enter Image URL"
+              placeholder="Enter Email"
             />
           </div>
         </div>

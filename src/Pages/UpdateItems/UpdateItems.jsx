@@ -7,7 +7,7 @@ const UpdateItems = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${id}`)
+    fetch(`https://server-side-eight-eosin.vercel.app/items/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -39,7 +39,7 @@ const UpdateItems = () => {
       stockStatus,
     };
     console.log(updateItem);
-    fetch(`http://localhost:5000/updateitems/${id}`, {
+    fetch(`https://server-side-eight-eosin.vercel.app/updateitems/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -61,11 +61,14 @@ const UpdateItems = () => {
       <form onSubmit={handleUpdate} className="mt-4 space-y-3">
         <div className="flex gap-8">
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="item_name">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="item_name"
+            >
               Item Name:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="item_name"
               name="item_name"
@@ -75,11 +78,14 @@ const UpdateItems = () => {
             />
           </div>
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="image">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="image"
+            >
               Image URL:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="image"
               name="image"
@@ -92,13 +98,13 @@ const UpdateItems = () => {
         <div className="flex gap-8">
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="subcategory_Name"
             >
               Subcategory Name:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               id="subcategory_Name"
               name="subcategory_Name"
               placeholder="Select Subcategory"
@@ -119,13 +125,13 @@ const UpdateItems = () => {
           </div>
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="stockStatus"
             >
               Stock Status:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               id="stockStatus"
               name="stockStatus"
               placeholder="Select Stock"
@@ -141,11 +147,14 @@ const UpdateItems = () => {
         </div>
         <div className="flex gap-8">
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="price">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="price"
+            >
               Price:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="price"
               name="price"
@@ -155,11 +164,14 @@ const UpdateItems = () => {
             />
           </div>
           <div className="w-1/2">
-            <label className="text-[#1e1b4b] font-semibold" htmlFor="rating">
+            <label
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+              htmlFor="rating"
+            >
               Rating:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               maxLength={5}
               max={5}
               min={0}
@@ -175,13 +187,13 @@ const UpdateItems = () => {
         <div className="flex gap-8">
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="customization"
             >
               Customization:
             </label>
             <select
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               id="customization"
               name="customization"
               placeholder="Select Customization"
@@ -196,13 +208,13 @@ const UpdateItems = () => {
           </div>
           <div className="w-1/2">
             <label
-              className="text-[#1e1b4b] font-semibold"
+              className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="processing_time"
             >
               Processing Time:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="processing_time"
               name="processing_time"
@@ -213,11 +225,14 @@ const UpdateItems = () => {
           </div>
         </div>
         <div className="">
-          <label className="text-[#1e1b4b] font-semibold" htmlFor="description">
+          <label
+            className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
+            htmlFor="description"
+          >
             Short Description:
           </label>
           <textarea
-            className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+            className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
             type="text"
             id="description"
             name="description"

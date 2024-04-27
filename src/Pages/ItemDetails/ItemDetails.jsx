@@ -6,7 +6,7 @@ const ItemDetails = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${id}`)
+    fetch(`https://server-side-eight-eosin.vercel.app/items/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -16,6 +16,7 @@ const ItemDetails = () => {
   return (
     <div>
       <h2>{product.item_name}</h2>
+      <img src={product.image} alt="" />
     </div>
   );
 };

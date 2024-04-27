@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 
-const AllItems = () => {
+const OilPainting = () => {
   const [items, setItems] = useState([]);
+  const category = "Oil Painting";
   useEffect(() => {
-    fetch("https://server-side-eight-eosin.vercel.app/allitems")
+    fetch(
+      `https://server-side-eight-eosin.vercel.app/itemscategory/${category}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -11,7 +14,7 @@ const AllItems = () => {
   }, []);
   return (
     <div>
-      <h2>This is All Items</h2>
+      <h2>This is Oil Painting</h2>
       {items.map((item) => (
         <div className="mt-4" key={item._id}>
           <p>{item.item_name}</p>
@@ -22,4 +25,4 @@ const AllItems = () => {
   );
 };
 
-export default AllItems;
+export default OilPainting;

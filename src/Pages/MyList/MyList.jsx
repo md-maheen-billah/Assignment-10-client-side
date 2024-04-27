@@ -7,7 +7,7 @@ const MyList = () => {
   const { user } = useContext(AuthContext);
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/mylist/${user?.email}`)
+    fetch(`https://server-side-eight-eosin.vercel.app/mylist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -25,7 +25,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${_id}`, {
+        fetch(`https://server-side-eight-eosin.vercel.app/delete/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -53,9 +53,7 @@ const MyList = () => {
           <Link to={`/updateitems/${item._id}`}>
             <button className="btn">Update</button>
           </Link>
-          <Link to={`/itemdetails/${item._id}`}>
-            <button className="btn">Details</button>
-          </Link>
+
           <button onClick={() => handleDelete(item._id)} className="btn">
             X
           </button>
