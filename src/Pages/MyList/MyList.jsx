@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import MyItemCard from "../../components/MyItemCard";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -47,17 +47,11 @@ const MyList = () => {
   return (
     <div>
       {items.map((item) => (
-        <div className="mt-4" key={item._id}>
-          <p>{item.item_name}</p>
-          <p>{item.email}</p>
-          <Link to={`/updateitems/${item._id}`}>
-            <button className="btn">Update</button>
-          </Link>
-
-          <button onClick={() => handleDelete(item._id)} className="btn">
-            X
-          </button>
-        </div>
+        <MyItemCard
+          handleDelete={handleDelete}
+          item={item}
+          key={item._id}
+        ></MyItemCard>
       ))}
     </div>
   );
