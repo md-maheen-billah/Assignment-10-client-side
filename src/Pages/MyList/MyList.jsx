@@ -45,7 +45,10 @@ const MyList = () => {
     });
   };
   return (
-    <div>
+    <div className="mt-4 mb-8 lg:my-8">
+      <h2 className="text-center text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
+        My Art & Craft List
+      </h2>
       {items.map((item) => (
         <MyItemCard
           handleDelete={handleDelete}

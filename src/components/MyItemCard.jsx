@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const MyItemCard = ({ item, handleDelete }) => {
   return (
     <div>
-      <div className="flex my-6 lg:w-10/12 mx-auto lg:my-12 flex-col lg:flex-row">
+      <div className="flex my-6 lg:w-10/12 mx-auto lg:h-56 lg:my-12 flex-col lg:flex-row">
         <div className="lg:w-4/12 relative">
           <img
             className="lg:rounded-l-lg lg:h-full w-full"
@@ -16,23 +17,23 @@ const MyItemCard = ({ item, handleDelete }) => {
         </div>
         <div className="bg-[#f9a06f] lg:w-8/12 px-2 py-4 lg:p-5 lg:rounded-r-lg">
           <div className="px-4 space-y-4">
-            <h2 className="text-[#1e1b4b] text-xl font-semibold 2xl:text-3xl xl:text-2xl animate__animated animate__headShake  animate__slow animate__infinite">
+            <h2 className="text-[#1e1b4b] text-xl font-semibold lg:text-3xl animate__animated animate__headShake  animate__slow animate__infinite">
               {item.item_name}
             </h2>
-            <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-12">
-              <p className="text-[#1e1b4b] font-semibold 2xl:text-base lg:text-xs xl:text-base ">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-8">
+              <p className="text-[#1e1b4b] font-semibold xl:text-base lg:text-sm  ">
                 Subcategory:{" "}
                 <span className="text-[#fff4ed] font-normal">
                   {item.subcategory_Name}
                 </span>
               </p>
-              <p className="text-[#1e1b4b] font-semibold 2xl:text-base lg:text-xs xl:text-base">
+              <p className="text-[#1e1b4b] font-semibold xl:text-base lg:text-sm ">
                 Customizable:{" "}
                 <span className="text-[#fff4ed] font-normal">
                   {item.customization}
                 </span>
               </p>
-              <p className="text-[#1e1b4b] font-semibold 2xl:text-base lg:text-xs xl:text-base">
+              <p className="text-[#1e1b4b] font-semibold xl:text-base lg:text-sm ">
                 Rating:{" "}
                 <span className="text-[#fff4ed] font-normal">
                   {item.rating}
@@ -40,7 +41,7 @@ const MyItemCard = ({ item, handleDelete }) => {
               </p>
             </div>
             <div className="flex justify-between items-center">
-              <p className="text-[#1e1b4b]  2xl:text-4xl lg:text-xl text-3xl font-semibold">
+              <p className="text-[#1e1b4b]  text-4xl md:text-3xl font-semibold">
                 ${item.price}
               </p>
             </div>
@@ -66,6 +67,11 @@ const MyItemCard = ({ item, handleDelete }) => {
       </div>
     </div>
   );
+};
+
+MyItemCard.propTypes = {
+  item: PropTypes.object,
+  handleDelete: PropTypes.func,
 };
 
 export default MyItemCard;
