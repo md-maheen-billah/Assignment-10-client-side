@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const MyItemCard = ({ item, handleDelete }) => {
   return (
     <div>
-      <div className="flex my-6 lg:w-10/12 mx-auto lg:h-56 lg:my-12 flex-col lg:flex-row shadow-xl hover:scale-105  transition ">
+      <div className="flex my-6 lg:w-11/12 mx-auto lg:h-56 lg:my-12 flex-col lg:flex-row shadow-xl hover:scale-105  transition ">
         <div className="lg:w-4/12 relative">
           <img
             className="lg:rounded-l-lg lg:h-full w-full"

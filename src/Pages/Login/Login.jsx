@@ -56,7 +56,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
+    <div className="flex justify-center items-center mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">

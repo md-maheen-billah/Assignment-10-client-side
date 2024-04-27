@@ -51,7 +51,7 @@ const AddItems = () => {
   };
 
   return (
-    <div className="mt-4 mb-8  lg:my-8 px-2 lg:px-0">
+    <div className="mt-4 mb-8 lg:w-[800px] mx-auto lg:my-8 px-2 lg:px-0">
       <h2 className="text-center text-2xl lg:text-4xl font-bold text-primary animate__animated animate__headShake  animate__slow animate__infinite">
         Add Item
       </h2>

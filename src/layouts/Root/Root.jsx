@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const Root = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-between h-svh">
       <div className="h-16">
         <Navbar></Navbar>
       </div>

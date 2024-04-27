@@ -55,7 +55,7 @@ const UpdateItems = () => {
       });
   };
   return (
-    <div className="mt-4 mb-8 lg:my-6 px-2 lg:px-0">
+    <div className="mt-4 mb-8 lg:w-[800px] mx-auto lg:my-6 px-2 lg:px-0">
       <div className="flex items-center justify-between">
         <Link to="/mylist">
           <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">

@@ -11,7 +11,7 @@ const AllItems = () => {
       });
   }, []);
   return (
-    <div className="mt-4 mb-8 lg:my-8 px-2 lg:px-0">
+    <div className="mt-4 mb-8 lg:mt-8 mb-16 px-2 lg:px-0">
       <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
         All Art & Craft Items
       </h2>
