@@ -135,7 +135,7 @@ const Register = () => {
           </form>
         </div>
         <div className="text-center">
-          <p className="mt-6 font-semibold text-[#1e1b4b]">
+          <p className="mt-6 font-semibold dark:text-white text-[#1e1b4b]">
             Already Have An Account? {""}
             <Link to="/login" className="text-[#f9a06f] underline">
               Login Here

@@ -38,6 +38,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        toast.error(error.message);
       });
   };
 
@@ -50,6 +51,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        toast.error(error.message);
       });
   };
 
@@ -143,7 +145,7 @@ const Login = () => {
           </div>
         </div>
         <div className="text-center">
-          <p className="mt-6 font-semibold text-[#1e1b4b]">
+          <p className="mt-6 font-semibold dark:text-white text-[#1e1b4b]">
             Don&#39;t Have An Account? {""}
             <Link to="/register" className="text-[#f9a06f] underline">
               Register Here

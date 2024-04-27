@@ -55,7 +55,7 @@ const UpdateItems = () => {
       });
   };
   return (
-    <div className="mt-4 mb-8 lg:my-6 ">
+    <div className="mt-4 mb-8 lg:my-6 px-2 lg:px-0">
       <div className="flex items-center justify-between">
         <Link to="/mylist">
           <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">
@@ -64,7 +64,7 @@ const UpdateItems = () => {
             <VscTriangleLeft />
           </button>
         </Link>
-        <h2 className="text-center mt-2 text-2xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
+        <h2 className="text-center mt-2 text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
           Update Item
         </h2>
         <div className="w-10"></div>

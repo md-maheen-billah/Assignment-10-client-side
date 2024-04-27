@@ -9,7 +9,7 @@ const Root = () => {
       <div className="h-16">
         <Navbar></Navbar>
       </div>
-      <div className="max-w-[1280px] mx-auto px-3 md:px-8 lg:px-10">
+      <div className="max-w-[1280px] mx-auto">
         <Outlet></Outlet>
         <Toaster position="top-center" reverseOrder={false} />
       </div>
