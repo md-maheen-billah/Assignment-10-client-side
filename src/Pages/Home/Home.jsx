@@ -44,7 +44,7 @@ const Home = () => {
                 <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
                   Craft Items Section
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-4 lg:mt-10 px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-4 lg:mt-10 px-2 lg:px-6">
                   {limitedItems.map((item) => (
                     <CraftItemCard item={item} key={item._id}></CraftItemCard>
                   ))}
