@@ -56,8 +56,8 @@ const AddItems = () => {
         Add Item
       </h2>
       <form onSubmit={handleAddItem} className="mt-4 space-y-3">
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="item_name"
@@ -65,7 +65,7 @@ const AddItems = () => {
               Item Name:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="item_name"
               name="item_name"
@@ -73,7 +73,7 @@ const AddItems = () => {
               placeholder="Enter Item Name"
             />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
               htmlFor="image"
@@ -81,7 +81,7 @@ const AddItems = () => {
               Image URL:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="image"
               name="image"
@@ -90,8 +90,8 @@ const AddItems = () => {
             />
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
               htmlFor="subcategory_Name"
@@ -115,7 +115,7 @@ const AddItems = () => {
               <option value="Cartoon Drawing">Cartoon Drawing</option>
             </select>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f]  font-semibold"
               htmlFor="stockStatus"
@@ -134,8 +134,8 @@ const AddItems = () => {
             </select>
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="price"
@@ -143,7 +143,7 @@ const AddItems = () => {
               Price:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="price"
               name="price"
@@ -151,7 +151,7 @@ const AddItems = () => {
               placeholder="Enter Price"
             />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="rating"
@@ -159,7 +159,7 @@ const AddItems = () => {
               Rating:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               maxLength={5}
               max={5}
               min={0}
@@ -171,8 +171,8 @@ const AddItems = () => {
             />
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="customization"
@@ -190,7 +190,7 @@ const AddItems = () => {
               <option value="No">No</option>
             </select>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="processing_time"
@@ -198,7 +198,7 @@ const AddItems = () => {
               Processing Time:
             </label>
             <input
-              className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+              className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
               type="text"
               id="processing_time"
               name="processing_time"
@@ -215,7 +215,7 @@ const AddItems = () => {
             Short Description:
           </label>
           <textarea
-            className="mt-2  p-2 rounded-md w-full bg-[#ffede2]"
+            className="mt-2 dark:text-black p-2 rounded-md w-full bg-[#ffede2]"
             type="text"
             id="description"
             name="description"
@@ -223,8 +223,8 @@ const AddItems = () => {
             placeholder="Write a Short Description"
           />
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="name"
@@ -241,7 +241,7 @@ const AddItems = () => {
               defaultValue={user.displayName}
             />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="email"

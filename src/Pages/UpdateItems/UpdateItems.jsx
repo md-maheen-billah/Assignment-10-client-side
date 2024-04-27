@@ -58,7 +58,7 @@ const UpdateItems = () => {
     <div className="mt-4 mb-8 lg:my-6 ">
       <div className="flex items-center justify-between">
         <Link to="/mylist">
-          <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
+          <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">
             <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
             <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
             <VscTriangleLeft />
@@ -70,8 +70,8 @@ const UpdateItems = () => {
         <div className="w-10"></div>
       </div>
       <form onSubmit={handleUpdate} className="mt-4 space-y-3">
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="item_name"
@@ -88,7 +88,7 @@ const UpdateItems = () => {
               placeholder="Enter Item Name"
             />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="image"
@@ -106,8 +106,8 @@ const UpdateItems = () => {
             />
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="subcategory_Name"
@@ -134,7 +134,7 @@ const UpdateItems = () => {
               <option value="Cartoon Drawing">Cartoon Drawing</option>
             </select>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="stockStatus"
@@ -156,8 +156,8 @@ const UpdateItems = () => {
             </select>
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="price"
@@ -174,7 +174,7 @@ const UpdateItems = () => {
               placeholder="Enter Price"
             />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="rating"
@@ -195,8 +195,8 @@ const UpdateItems = () => {
             />
           </div>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="customization"
@@ -217,7 +217,7 @@ const UpdateItems = () => {
               <option value="No">No</option>
             </select>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <label
               className="text-[#1e1b4b] dark:text-[#f9a06f] font-semibold"
               htmlFor="processing_time"
@@ -255,7 +255,7 @@ const UpdateItems = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+            className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000"
           >
             <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
             <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
