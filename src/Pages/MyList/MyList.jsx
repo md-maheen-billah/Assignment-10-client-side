@@ -23,38 +23,8 @@ const MyList = () => {
       });
   }, [user]);
 
-  const handleLandscape = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Landscape Painting"
-    );
-    setItemsf(newSortWish);
-  };
-
-  const handlePortrait = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Portrait Drawing"
-    );
-    setItemsf(newSortWish);
-  };
-
-  const handleWatercolour = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Watercolour Painting"
-    );
-    setItemsf(newSortWish);
-  };
-
-  const handleOil = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Oil Painting"
-    );
-    setItemsf(newSortWish);
-  };
-
-  const handleCharcoal = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Charcoal Sketching"
-    );
+  const handleYes = () => {
+    const newSortWish = items.filter((sor) => sor.customization === "Yes");
     setItemsf(newSortWish);
   };
 
@@ -63,10 +33,8 @@ const MyList = () => {
     setItemsf(newSortWish);
   };
 
-  const handleCartoon = () => {
-    const newSortWish = items.filter(
-      (sor) => sor.subcategory_Name === "Cartoon Drawing"
-    );
+  const handleNo = () => {
+    const newSortWish = items.filter((sor) => sor.customization === "No");
     setItemsf(newSortWish);
   };
 
@@ -128,49 +96,17 @@ const MyList = () => {
                 <li>
                   <a
                     className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handleLandscape}
+                    onClick={handleYes}
                   >
-                    Landscape Painting
+                    Customizable
                   </a>
                 </li>
                 <li>
                   <a
                     className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handlePortrait}
+                    onClick={handleNo}
                   >
-                    Portrait Drawing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handleWatercolour}
-                  >
-                    Watercolour Painting
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handleOil}
-                  >
-                    Oil Painting
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handleCharcoal}
-                  >
-                    Charcoal Sketching
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-[#f9a06f] hover:bg-[#f9a06f] hover:text-[#1e1b4b]"
-                    onClick={handleCartoon}
-                  >
-                    Cartoon Drawing
+                    Not Customizable
                   </a>
                 </li>
               </ul>
