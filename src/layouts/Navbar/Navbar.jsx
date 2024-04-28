@@ -180,13 +180,10 @@ const Navbar = () => {
             {navLinks2}
           </ul>
         </div>
-        <Link
-          to="/"
-          className="btn btn-ghost text-2xl font-extrabold dark:text-[#fff4ed] text-[#1e1b4b] p-0 "
-        >
+        <button className="btn btn-ghost text-2xl font-extrabold dark:text-[#fff4ed] text-[#1e1b4b] p-0 ">
           Canvas <span className="text-[#f9a06f]">Isle</span>{" "}
           <FaPaintBrush className="text-[#f9a06f]" />
-        </Link>
+        </button>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex font-medium gap-6">{navLinks}</ul>

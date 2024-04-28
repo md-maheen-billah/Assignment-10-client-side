@@ -14,6 +14,9 @@ import ItemDetails from "../Pages/ItemDetails/ItemDetails";
 import OilPainting from "../Pages/Categories/OilPainting";
 import LandscapePainting from "../Pages/Categories/LandscapePainting";
 import Potrait from "../Pages/Categories/Potrait";
+import WaterColorPainting from "../Pages/Categories/WaterColorPainting";
+import CharcoalSketching from "../Pages/Categories/CharcoalSketching";
+import CartoonDrawing from "../Pages/Categories/CartoonDrawing";
 
 const router = createBrowserRouter([
   {
@@ -80,6 +83,18 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/watercolorpainting",
+        element: <WaterColorPainting></WaterColorPainting>,
+      },
+      {
+        path: "/charcoalsketching",
+        element: <CharcoalSketching></CharcoalSketching>,
+      },
+      {
+        path: "/cartoondrawing",
+        element: <CartoonDrawing></CartoonDrawing>,
       },
     ],
   },

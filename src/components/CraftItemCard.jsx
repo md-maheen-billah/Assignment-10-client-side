@@ -11,7 +11,7 @@ const CraftItemCard = ({ item }) => {
             src={item.image}
             alt=""
           />
-          <div className="animate__animated badge  rounded-3xl animate__slower animate__swing animate__infinite font-medium bg-[#f9a06f] border-[#f9a06f] text-[#1e1b4b] absolute top-4 left-4 ">
+          <div className="animate__animated text-sm  py-2 px-3 rounded-3xl animate__slower animate__swing animate__infinite font-medium bg-[#f9a06f] border-[#f9a06f] text-[#1e1b4b]  absolute top-4 left-4 ">
             {item.stockStatus}
           </div>
         </div>

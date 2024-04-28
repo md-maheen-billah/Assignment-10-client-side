@@ -6,12 +6,16 @@ const AllItemCard = ({ item }) => {
     <div>
       <div className="flex mx-auto flex-col hover:scale-105 transition shadow-xl ">
         <div className="relative">
-          <img className="lg:h-64 md:h-64 w-full" src={item.image} alt="" />
+          <img
+            className="lg:h-64 md:h-64 rounded-t-lg w-full"
+            src={item.image}
+            alt=""
+          />
           <div className="animate__animated badge  rounded-3xl animate__slower animate__swing animate__infinite font-medium bg-[#f9a06f] border-[#f9a06f] text-[#1e1b4b] absolute top-4 left-4 ">
             {item.stockStatus}
           </div>
         </div>
-        <div className="bg-[#f9a06f] px-2 py-4 lg:p-4">
+        <div className="bg-[#f9a06f] rounded-b-lg px-2 py-4 lg:p-4">
           <div className="px-4 space-y-4">
             <h2 className="text-[#1e1b4b] truncate max-w-[250px] text-xl font-semibold animate__animated animate__headShake  animate__slow animate__infinite">
               {item.item_name}
