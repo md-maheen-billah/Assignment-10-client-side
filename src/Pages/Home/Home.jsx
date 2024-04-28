@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Banner from "../../components/Banner";
 import CraftItemCard from "../../components/CraftItemCard";
 import Spinner from "../../components/Spinner.jsx";
+import Categories from "../../components/Categories.jsx";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -23,27 +24,10 @@ const Home = () => {
         <Banner></Banner>
       </div>
       <div className="lg:my-16">
-        <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
-          Craft Items Section
+        <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+          Art & Craft Categories
         </h2>
-        <Link to="/landscapepaintings">
-          <button className="btn bg-red-400">Landscape Painting</button>
-        </Link>
-        <Link to="/portraitdrawing">
-          <button className="btn bg-red-400">Portrait Drawing</button>
-        </Link>
-        <Link to="/watercolorpainting">
-          <button className="btn bg-red-400">Watercolour Painting</button>
-        </Link>
-        <Link to="/oilpaintings">
-          <button className="btn bg-red-400">Oil Painting</button>
-        </Link>
-        <Link to="/charcoalsketching">
-          <button className="btn bg-red-400">Charcoal Sketching</button>
-        </Link>
-        <Link to="/cartoondrawing">
-          <button className="btn bg-red-400">Cartoon Drawing</button>
-        </Link>
+        <Categories></Categories>
       </div>
       <div>
         {(loading && <Spinner />) || (
