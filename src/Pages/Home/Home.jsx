@@ -22,12 +22,17 @@ const Home = () => {
       <div className="mt-8 px-2 lg:px-0">
         <Banner></Banner>
       </div>
-      <Link to="/oilpaintings">
-        <button className="btn bg-red-400">Oil Painting</button>
-      </Link>
-      <Link to="/landscapepaintings">
-        <button className="btn bg-red-400">Landscape Painting</button>
-      </Link>
+      <div>
+        <Link to="/oilpaintings">
+          <button className="btn bg-red-400">Oil Painting</button>
+        </Link>
+        <Link to="/landscapepaintings">
+          <button className="btn bg-red-400">Landscape Painting</button>
+        </Link>
+        <Link to="/portraitdrawing">
+          <button className="btn bg-red-400">Portrait Drawing</button>
+        </Link>
+      </div>
       <div>
         {(loading && <Spinner />) || (
           <div>

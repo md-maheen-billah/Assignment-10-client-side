@@ -13,6 +13,7 @@ import UpdateItems from "../Pages/UpdateItems/UpdateItems";
 import ItemDetails from "../Pages/ItemDetails/ItemDetails";
 import OilPainting from "../Pages/Categories/OilPainting";
 import LandscapePainting from "../Pages/Categories/LandscapePainting";
+import Potrait from "../Pages/Categories/Potrait";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "/landscapepaintings",
         element: <LandscapePainting></LandscapePainting>,
+      },
+      {
+        path: "/portraitdrawing",
+        element: <Potrait></Potrait>,
       },
       {
         path: "/register",
