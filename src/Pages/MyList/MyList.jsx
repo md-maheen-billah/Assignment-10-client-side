@@ -172,8 +172,8 @@ const MyList = () => {
             </details>
           </div>
           {itemsf.length < 1 && (
-            <div className="lg:mt-36 lg:mb-48 mt-4 mb-8">
-              <h1 className="text-4xl text-[#05386B] text-center">
+            <div className="lg:mt-36 lg:mb-48 mt-8 mb-8">
+              <h1 className="text-4xl dark:text-[#f9a06f] text-[#05386B] text-center">
                 No Art & Craft Found!
               </h1>
               <div className="flex justify-center mt-6">

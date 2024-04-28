@@ -17,12 +17,13 @@ import Potrait from "../Pages/Categories/Potrait";
 import WaterColorPainting from "../Pages/Categories/WaterColorPainting";
 import CharcoalSketching from "../Pages/Categories/CharcoalSketching";
 import CartoonDrawing from "../Pages/Categories/CartoonDrawing";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement: <Error></Error>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

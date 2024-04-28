@@ -21,21 +21,21 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div className="lg:mt-12 mt-4 px-2 lg:px-2">
-        <Marque></Marque>
-      </div>
-      <div className="lg:mt-12 mt-4 lg:pl-6 px-2">
-        <Banner></Banner>
-      </div>
-      <div className="lg:mt-8 mt-4 mb-4">
-        <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
-          Art & Craft Categories
-        </h2>
-        <Categories></Categories>
-      </div>
       <div>
         {(loading && <Spinner />) || (
           <div>
+            <div className="lg:mt-12 mt-4 px-2 lg:px-2">
+              <Marque></Marque>
+            </div>
+            <div className="lg:mt-12 mt-4 lg:pl-6 px-2">
+              <Banner></Banner>
+            </div>
+            <div className="lg:mt-8 mt-4 mb-4">
+              <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+                Art & Craft Categories
+              </h2>
+              <Categories></Categories>
+            </div>
             <div className="bg-[url('././assets/wave.svg')]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path

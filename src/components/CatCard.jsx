@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const CatCard = ({ item }) => {
   const { image } = item;
@@ -19,6 +20,10 @@ const CatCard = ({ item }) => {
       </Link>
     </div>
   );
+};
+
+CatCard.propTypes = {
+  item: PropTypes.object,
 };
 
 export default CatCard;
