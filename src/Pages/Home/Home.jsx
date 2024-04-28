@@ -31,17 +31,8 @@ const Home = () => {
       <div>
         {(loading && <Spinner />) || (
           <div data-aos="fade-up">
-            <div className="lg:mt-12 mt-4 px-2 lg:px-2">
-              <Marque></Marque>
-            </div>
-            <div className="lg:mt-12 mt-4 lg:pl-6 px-2">
+            <div className="lg:mt-8 mt-4 lg:pl-6 px-2">
               <Banner></Banner>
-            </div>
-            <div className="lg:mt-8 mt-4 mb-4">
-              <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
-                <Bounce> Art & Craft Categories</Bounce>
-              </h2>
-              <Categories></Categories>
             </div>
             <div className="bg-[url('././assets/wave.svg')]">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -78,7 +69,16 @@ const Home = () => {
                 d="M0,128L34.3,138.7C68.6,149,137,171,206,149.3C274.3,128,343,64,411,42.7C480,21,549,43,617,69.3C685.7,96,754,128,823,128C891.4,128,960,96,1029,112C1097.1,128,1166,192,1234,208C1302.9,224,1371,192,1406,176L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
               ></path>
             </svg>
+            <div className=" mb-4">
+              <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+                <Bounce> Art & Craft Categories</Bounce>
+              </h2>
+              <Categories></Categories>
+            </div>
             <WhyUs></WhyUs>
+            <div className="lg:mt-12 mt-4 px-2 lg:px-2">
+              <Marque></Marque>
+            </div>
           </div>
         )}
       </div>
