@@ -35,7 +35,7 @@ const Home = () => {
       <div>
         {(loading && <Spinner />) || (
           <div data-aos="fade-up">
-            <div className="lg:mt-8 mt-4 lg:pl-6 px-2">
+            <div className="lg:mt-8 mt-4 lg:pl-12 px-2">
               <Banner></Banner>
             </div>
             <div className="bg-[url('././assets/wave.svg')]">

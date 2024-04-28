@@ -29,14 +29,14 @@ const Banner = () => {
         <SwiperSlide>
           <div className="flex flex-col lg:flex-row justify-between items-center lg:h-[450px]">
             <div className="flex flex-col justify-center">
-              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center md:text-left">
+              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center lg:text-left">
                 <div className="bg-[#f9a06f] text-white mr-2 text-xl px-1 py-1 rounded-full">
                   <AiFillFire />
                 </div>
                 Hot Products
               </div>
 
-              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
+              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center lg:text-left">
                 Embark on an Amazing Journey <br /> Through{" "}
                 <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}
@@ -51,11 +51,11 @@ const Banner = () => {
                   />
                 </span>
               </p>
-              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
+              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center lg:text-left">
                 Stay inspired with the latest trends and innovations in
                 painting.
               </p>
-              <div className="flex justify-center mb-2 md:justify-start">
+              <div className="flex justify-center mb-2">
                 <a href="#items-s">
                   <button className="font-bold mt-6 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
                     <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
@@ -76,14 +76,14 @@ const Banner = () => {
         <SwiperSlide>
           <div className="flex flex-col lg:flex-row justify-between items-center lg:h-[450px]">
             <div className="flex flex-col justify-center">
-              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center md:text-left">
+              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center lg:text-left">
                 <div className="bg-[#f9a06f] text-white mr-2 text-xl px-1 py-1 rounded-full">
                   <AiFillFire />
                 </div>
                 Hot Products
               </div>
 
-              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
+              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center lg:text-left">
                 Your premier destination for <br /> exquisite{" "}
                 <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}
@@ -98,7 +98,7 @@ const Banner = () => {
                   />
                 </span>
               </p>
-              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
+              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center lg:text-left">
                 Discover a diverse range of captivating paintings crafted by
                 talented artists.
               </p>
@@ -123,14 +123,14 @@ const Banner = () => {
         <SwiperSlide>
           <div className="flex flex-col lg:flex-row justify-between items-center lg:h-[450px]">
             <div className="flex flex-col justify-center">
-              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center md:text-left">
+              <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center lg:text-left">
                 <div className="bg-[#f9a06f] text-white mr-2 text-xl px-1 py-1 rounded-full">
                   <AiFillFire />
                 </div>
                 Hot Products
               </div>
 
-              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
+              <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center lg:text-left">
                 Discover the Wonders of Artistry <br /> with{" "}
                 <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}
@@ -145,7 +145,7 @@ const Banner = () => {
                   />
                 </span>
               </p>
-              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
+              <p className="font-medium text-black/60 dark:text-white md:text-lg text-center lg:text-left">
                 Stay ahead with the latest tech trends and innovations.
               </p>
               <div className="flex justify-center mb-2">
