@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const CraftItemCard = ({ item }) => {
   return (
     <div>
-      <div className="flex mx-auto flex-col hover:scale-105 transition shadow-xl">
+      <div className="flex mx-auto flex-col lg:hover:scale-105 transition shadow-xl">
         <div className="relative">
           <img
             className="lg:h-64 md:h-64 rounded-t-lg w-full"

@@ -38,27 +38,41 @@ const ItemDetails = () => {
                 {product.description}
               </p>
               <p className="text-[#f9a06f] font-semibold xl:text-base text-sm ">
-                Property Type:{" "}
+                Subcategory:{" "}
                 <span className="text-[#1e1b4b] dark:text-white font-normal">
                   {product.subcategory_Name}
                 </span>
               </p>
               <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
-                Location:{" "}
+                Customizable:{" "}
                 <span className="text-[#1e1b4b] dark:text-white font-normal">
                   {product.customization}
                 </span>
               </p>
+              <div className="flex flex-col lg:flex-row item gap-4 lg:gap-6">
+                <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
+                  Rating:{" "}
+                  <span className="text-[#1e1b4b] dark:text-white font-normal">
+                    {product.rating}
+                  </span>
+                </p>
+                <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
+                  Processing Time:{" "}
+                  <span className="text-[#1e1b4b] dark:text-white font-normal">
+                    {product.processing_time}
+                  </span>
+                </p>
+              </div>
               <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
-                Area:{" "}
+                Posted By:{" "}
                 <span className="text-[#1e1b4b] dark:text-white font-normal">
-                  {product.rating} acres
+                  {product.name}
                 </span>
               </p>
               <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
-                Area:{" "}
+                Contact:{" "}
                 <span className="text-[#1e1b4b] dark:text-white font-normal">
-                  {product.processing_time} acres
+                  {product.email}
                 </span>
               </p>
               <div className="flex justify-between items-center">

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const AllItemCard = ({ item }) => {
+const AllItemCard2 = ({ item }) => {
   return (
     <div>
-      <div className="flex mx-auto flex-col rounded-lg lg:hover:scale-105 transition shadow-xl ">
+      <div className="flex mx-auto flex-col lg:hover:scale-105 rounded-lg transition shadow-xl ">
         <div className="relative">
           <img
             className="lg:h-64 md:h-64 rounded-t-lg w-full"
@@ -21,6 +21,9 @@ const AllItemCard = ({ item }) => {
               {item.item_name}
             </h2>
             <div className="flex flex-col gap-2 ">
+              <p className="text-[#fff4ed] font-semibold h-14  text-sm ">
+                {item.description}
+              </p>
               <p className="text-[#1e1b4b] font-semibold truncate max-w-[250px] text-sm ">
                 Subcategory:{" "}
                 <span className="text-[#fff4ed] font-normal">
@@ -28,9 +31,9 @@ const AllItemCard = ({ item }) => {
                 </span>
               </p>
               <p className="text-[#1e1b4b] font-semibold truncate max-w-[250px] text-sm">
-                Customizable:{" "}
+                Processing Time:{" "}
                 <span className="text-[#fff4ed] font-normal">
-                  {item.customization}
+                  {item.processing_time}
                 </span>
               </p>
               <p className="text-[#1e1b4b] font-semibold truncate max-w-[250px] text-sm">
@@ -60,8 +63,8 @@ const AllItemCard = ({ item }) => {
     </div>
   );
 };
-AllItemCard.propTypes = {
+AllItemCard2.propTypes = {
   item: PropTypes.object,
 };
 
-export default AllItemCard;
+export default AllItemCard2;

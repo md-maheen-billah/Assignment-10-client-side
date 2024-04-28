@@ -24,7 +24,7 @@ const Home = () => {
       <div className="lg:mt-12 mt-4 px-2 lg:px-2">
         <Marque></Marque>
       </div>
-      <div className="lg:mt-12 mt-4 lg:pl-6">
+      <div className="lg:mt-12 mt-4 lg:pl-6 px-2">
         <Banner></Banner>
       </div>
       <div className="lg:mt-8 mt-4 mb-4">

@@ -10,6 +10,7 @@ const Footer = () => {
             Canvas <span className="text-[#f9a06f]">Isle</span>{" "}
             <FaPaintBrush className="text-[#f9a06f]" />
           </h2>
+          <p>Contact Information - md.maheen.billah.97@gmail.com</p>
           <p>Copyright © 2024 - All right reserved by Md. Maheen Billah</p>
           <div className="text-xl mt-2 flex items-center gap-4">
             <a href="https://www.facebook.com/md.maheen.billah.97/">
