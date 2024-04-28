@@ -4,6 +4,7 @@ import { IoEyeOff } from "react-icons/io5";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Bounce } from "react-awesome-reveal";
 
 const Register = () => {
   const { createUser, updateUser, setUser } = useContext(AuthContext);
@@ -49,7 +50,7 @@ const Register = () => {
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
-            Register An Account
+            <Bounce>Register An Account</Bounce>
           </h2>
           <form onSubmit={handleRegister} className="mt-4 space-y-4">
             <div className="">

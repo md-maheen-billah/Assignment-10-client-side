@@ -5,6 +5,7 @@ import MyItemCard from "../../components/MyItemCard";
 import Spinner from "../../components/Spinner.jsx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { Bounce } from "react-awesome-reveal";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -104,7 +105,7 @@ const MyList = () => {
       {(loading && <Spinner />) || (
         <div className="mt-4 mb-8 lg:my-8 px-2 lg:px-0">
           <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
-            My Art & Craft List
+            <Bounce>My Art & Craft List</Bounce>
           </h2>
           <div className="flex justify-center lg:mt-8 mt-6 mx-2 lg:mx-0 ">
             <details className="dropdown">

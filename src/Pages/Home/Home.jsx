@@ -5,6 +5,7 @@ import CraftItemCard from "../../components/CraftItemCard";
 import Spinner from "../../components/Spinner.jsx";
 import Categories from "../../components/Categories.jsx";
 import Marque from "../../components/Marque.jsx";
+import { Bounce } from "react-awesome-reveal";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -32,7 +33,7 @@ const Home = () => {
             </div>
             <div className="lg:mt-8 mt-4 mb-4">
               <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
-                Art & Craft Categories
+                <Bounce> Art & Craft Categories</Bounce>
               </h2>
               <Categories></Categories>
             </div>
@@ -47,7 +48,7 @@ const Home = () => {
             <div id="items-s">
               <div className="bg-[#f9a06f]">
                 <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
-                  Craft Items Section
+                  <Bounce>Craft Items Section</Bounce>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-4 lg:mt-10 px-2 lg:px-6">
                   {limitedItems.map((item) => (

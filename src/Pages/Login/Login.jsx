@@ -5,6 +5,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Bounce } from "react-awesome-reveal";
 
 const Login = () => {
   const { signInUser, googleSignIn, gitSignIn } = useContext(AuthContext);
@@ -59,9 +60,12 @@ const Login = () => {
     <div className="flex justify-center items-center mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
-          <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
-            Login Your Account
-          </h2>
+          <Bounce>
+            {" "}
+            <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
+              Login Your Account
+            </h2>
+          </Bounce>
           <form onSubmit={handleLogin} className="mt-4 space-y-4">
             <div className="">
               <label className="text-[#1e1b4b] font-semibold" htmlFor="email">

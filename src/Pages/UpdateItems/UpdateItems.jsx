@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import { VscTriangleLeft } from "react-icons/vsc";
+import { Bounce } from "react-awesome-reveal";
 
 const UpdateItems = () => {
   const { id } = useParams();
@@ -65,7 +66,7 @@ const UpdateItems = () => {
           </button>
         </Link>
         <h2 className="text-center mt-2 text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
-          Update Item
+          <Bounce> Update Item</Bounce>
         </h2>
         <div className="w-10"></div>
       </div>
@@ -231,7 +232,7 @@ const UpdateItems = () => {
               name="processing_time"
               defaultValue={product.processing_time}
               required
-              placeholder="Enter Processing Time mentioning days/hours (example: 1-2 days)"
+              placeholder="(example: 1-2 days)"
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AllItemCard2 from "../../components/AllItemCard2";
 import Spinner from "../../components/Spinner.jsx";
+import { Bounce } from "react-awesome-reveal";
 
 const OilPainting = () => {
   const [items, setItems] = useState([]);
@@ -21,7 +22,7 @@ const OilPainting = () => {
       {(loading && <Spinner />) || (
         <div className="mt-4 mb-8 lg:mt-8 lg:mb-16 px-2">
           <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
-            Oil Paintings
+            <Bounce>Oil Paintings</Bounce>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-4 lg:mt-10">
             {items.map((item) => (
