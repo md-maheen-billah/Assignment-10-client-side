@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const AllItemCard2 = ({ item }) => {
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="flex mx-auto flex-col lg:hover:scale-105 rounded-lg transition shadow-xl ">
         <div className="relative">
           <img

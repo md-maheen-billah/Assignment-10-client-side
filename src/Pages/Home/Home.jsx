@@ -7,8 +7,13 @@ import Categories from "../../components/Categories.jsx";
 import Marque from "../../components/Marque.jsx";
 import { Bounce } from "react-awesome-reveal";
 import WhyUs from "../../components/WhyUs.jsx";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const limit = 6; // Number of items to show
@@ -25,7 +30,7 @@ const Home = () => {
     <div>
       <div>
         {(loading && <Spinner />) || (
-          <div>
+          <div data-aos="fade-up">
             <div className="lg:mt-12 mt-4 px-2 lg:px-2">
               <Marque></Marque>
             </div>

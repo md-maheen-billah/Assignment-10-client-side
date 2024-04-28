@@ -1,12 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Bounce } from "react-awesome-reveal";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Register = () => {
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
+
   const { createUser, updateUser, setUser } = useContext(AuthContext);
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
@@ -46,7 +52,10 @@ const Register = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
+    <div
+      data-aos="fade-up"
+      className="flex justify-center items-center px-2 mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig"
+    >
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">

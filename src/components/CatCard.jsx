@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const CatCard = ({ item }) => {
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   const { image } = item;
   const bgIm = image;
   return (
-    <div className="">
+    <div data-aos="fade-up" className="">
       <Link to={`/${item.url}`}>
         <div
           style={{

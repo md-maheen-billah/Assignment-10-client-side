@@ -2,12 +2,17 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Bounce } from "react-awesome-reveal";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Login = () => {
+  useEffect(() => {
+    Aos.init({ duration: 700 });
+  }, []);
   const { signInUser, googleSignIn, gitSignIn } = useContext(AuthContext);
   const [showPass, setShowPass] = useState(false);
   const location = useLocation();
@@ -57,7 +62,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig">
+    <div
+      data-aos="fade-up"
+      className="flex justify-center items-center px-2 mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig"
+    >
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <Bounce>
