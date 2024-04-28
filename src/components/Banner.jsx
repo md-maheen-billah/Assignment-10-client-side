@@ -26,7 +26,7 @@ const Banner = () => {
       >
         {/* slide 1 */}
         <SwiperSlide>
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:h-[400px]">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:h-[450px]">
             <div className="flex flex-col justify-center">
               <div className="font-semibold flex items-center justify-center lg:justify-start text-[#f9a06f] mb-3 text-center md:text-left">
                 <div className="bg-[#f9a06f] text-white mr-2 text-xl px-1 py-1 rounded-full">

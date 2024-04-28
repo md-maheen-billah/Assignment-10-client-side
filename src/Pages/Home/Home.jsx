@@ -4,6 +4,7 @@ import Banner from "../../components/Banner";
 import CraftItemCard from "../../components/CraftItemCard";
 import Spinner from "../../components/Spinner.jsx";
 import Categories from "../../components/Categories.jsx";
+import Marque from "../../components/Marque.jsx";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -20,10 +21,13 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div className="mt-8 px-2 lg:px-0">
+      <div className="lg:mt-12 mt-4 px-2 lg:px-2">
+        <Marque></Marque>
+      </div>
+      <div className="lg:mt-12 mt-4 lg:pl-6">
         <Banner></Banner>
       </div>
-      <div className="lg:my-16">
+      <div className="lg:mt-8 mb-4">
         <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
           Art & Craft Categories
         </h2>
