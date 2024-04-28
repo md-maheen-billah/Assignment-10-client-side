@@ -6,6 +6,7 @@ import Spinner from "../../components/Spinner.jsx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { Bounce } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -102,6 +103,9 @@ const MyList = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>My List</title>
+      </Helmet>
       {(loading && <Spinner />) || (
         <div className="mt-4 mb-8 lg:my-8 px-2 lg:px-0">
           <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">

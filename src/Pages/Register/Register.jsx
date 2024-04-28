@@ -7,6 +7,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Bounce } from "react-awesome-reveal";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   useEffect(() => {
@@ -56,6 +57,9 @@ const Register = () => {
       data-aos="fade-up"
       className="flex justify-center items-center px-2 mt-4 mb-8 lg:my-16 animate__animated animate__fadeInDownBig"
     >
+      <Helmet>
+        <title>Register</title>
+      </Helmet>
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">

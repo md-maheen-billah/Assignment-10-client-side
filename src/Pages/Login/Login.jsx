@@ -8,6 +8,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Bounce } from "react-awesome-reveal";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   useEffect(() => {
@@ -66,6 +67,9 @@ const Login = () => {
       data-aos="fade-up"
       className="flex justify-center items-center px-2 mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig"
     >
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
       <div>
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <Bounce>

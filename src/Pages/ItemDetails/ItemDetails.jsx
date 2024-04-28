@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "../../components/Spinner.jsx";
 import { Bounce } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -18,6 +19,9 @@ const ItemDetails = () => {
   }, [id]);
   return (
     <div>
+      <Helmet>
+        <title>{product.item_name}</title>
+      </Helmet>
       {(loading && <Spinner />) || (
         <div className="flex mt-4 mb-8 px-2 lg:px-0 lg:w-9/12 mx-auto lg:my-12 flex-col lg:flex-row">
           <div className="lg:w-6/12 relative">

@@ -30,7 +30,7 @@ const Marque = () => {
                 From browsing the extensive collection to receiving my carefully
                 packaged painting, every step of the process was seamless.
               </p>
-              <a className="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <img
                   alt="testimonial"
                   src="https://i.ibb.co/8s0DTwv/girl1.jpg"
@@ -44,7 +44,7 @@ const Marque = () => {
                     Artist
                   </span>
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </Link>
@@ -64,7 +64,7 @@ const Marque = () => {
                 up to its portrayal. However, the masterpiece left me
                 speechless.
               </p>
-              <a className="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <img
                   alt="testimonial"
                   src="https://i.ibb.co/L9911wm/girl2.jpg"
@@ -78,7 +78,7 @@ const Marque = () => {
                     Cook
                   </span>
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </Link>
@@ -98,7 +98,7 @@ const Marque = () => {
                 sources, but none compare to the stunning pieces I found here.
                 Best craftsmanship.
               </p>
-              <a className="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <img
                   alt="testimonial"
                   src="https://i.ibb.co/ZTTnj6T/boy1.jpg"
@@ -112,7 +112,7 @@ const Marque = () => {
                     Lecturer
                   </span>
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </Link>
@@ -132,7 +132,7 @@ const Marque = () => {
                 my expectations! Each brushstroke tells a story, captivated
                 every time I admire it.
               </p>
-              <a className="inline-flex items-center">
+              <div className="inline-flex items-center">
                 <img
                   alt="testimonial"
                   src="https://i.ibb.co/9gHT10t/girl3.jpg"
@@ -146,7 +146,7 @@ const Marque = () => {
                     Comic Artist
                   </span>
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </Link>

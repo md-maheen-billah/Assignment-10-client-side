@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { Bounce } from "react-awesome-reveal";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const AddItems = () => {
   useEffect(() => {
@@ -62,6 +63,9 @@ const AddItems = () => {
       data-aos="fade-up"
       className="mt-4 mb-8 lg:w-[800px] mx-auto lg:my-8 px-2 lg:px-0"
     >
+      <Helmet>
+        <title>Add Craft Item</title>
+      </Helmet>
       <Bounce>
         <h2 className="text-center text-2xl lg:text-4xl font-bold text-primary animate__animated animate__headShake  animate__slow animate__infinite">
           Add Item

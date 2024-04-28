@@ -5,6 +5,7 @@ import { VscTriangleLeft } from "react-icons/vsc";
 import { Bounce } from "react-awesome-reveal";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const UpdateItems = () => {
   useEffect(() => {
@@ -66,6 +67,9 @@ const UpdateItems = () => {
       data-aos="fade-up"
       className="mt-4 mb-8 lg:w-[800px] mx-auto lg:my-6 px-2 lg:px-0"
     >
+      <Helmet>
+        <title>Update Item</title>
+      </Helmet>
       <div className="flex items-center justify-between">
         <Link to="/mylist">
           <button className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">

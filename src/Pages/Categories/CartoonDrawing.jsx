@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Bounce } from "react-awesome-reveal";
 import Spinner from "../../components/Spinner.jsx";
 import AllItemCard2 from "../../components/AllItemCard2.jsx";
+import { Helmet } from "react-helmet";
 
 const CartoonDrawing = () => {
   const [items, setItems] = useState([]);
@@ -19,6 +20,9 @@ const CartoonDrawing = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Cartoon Drawings</title>
+      </Helmet>
       {(loading && <Spinner />) || (
         <div className="mt-4 mb-8 lg:mt-8 lg:mb-16 px-2">
           <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">

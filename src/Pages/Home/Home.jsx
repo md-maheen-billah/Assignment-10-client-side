@@ -9,6 +9,7 @@ import { Bounce } from "react-awesome-reveal";
 import WhyUs from "../../components/WhyUs.jsx";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   useEffect(() => {
@@ -28,6 +29,9 @@ const Home = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Canvas Isle</title>
+      </Helmet>
       <div>
         {(loading && <Spinner />) || (
           <div data-aos="fade-up">
