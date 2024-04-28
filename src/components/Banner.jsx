@@ -2,6 +2,7 @@ import heroImg1 from "../assets/Hero/canvas1.png";
 import heroImg2 from "../assets/Hero/canvas2.png";
 import heroImg3 from "../assets/Hero/canvas3.png";
 import { AiFillFire } from "react-icons/ai";
+import { Typewriter } from "react-simple-typewriter";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -36,7 +37,19 @@ const Banner = () => {
               </div>
 
               <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                Embark on an Amazing Journey <br /> Through Artistry
+                Embark on an Amazing Journey <br /> Through{" "}
+                <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
+                  {/* Style will be inherited from the parent element */}
+                  <Typewriter
+                    words={["Artistry", "Wonders"]}
+                    loop={0}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={50}
+                    deleteSpeed={40}
+                    delaySpeed={1000}
+                  />
+                </span>
               </p>
               <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
                 Stay inspired with the latest trends and innovations in
@@ -71,7 +84,19 @@ const Banner = () => {
               </div>
 
               <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                Your premier destination for <br /> exquisite artwork
+                Your premier destination for <br /> exquisite{" "}
+                <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
+                  {/* Style will be inherited from the parent element */}
+                  <Typewriter
+                    words={["Artwork", "Collection"]}
+                    loop={0}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={50}
+                    deleteSpeed={40}
+                    delaySpeed={1000}
+                  />
+                </span>
               </p>
               <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
                 Discover a diverse range of captivating paintings crafted by
@@ -106,7 +131,19 @@ const Banner = () => {
               </div>
 
               <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                Discover the Wonders of Artistry <br /> at Canvas Isle
+                Discover the Wonders of Artistry <br /> with{" "}
+                <span style={{ color: "#f9a06f", fontWeight: "bold" }}>
+                  {/* Style will be inherited from the parent element */}
+                  <Typewriter
+                    words={["Canvas Isle", "Us"]}
+                    loop={0}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={50}
+                    deleteSpeed={40}
+                    delaySpeed={1000}
+                  />
+                </span>
               </p>
               <p className="font-medium text-black/60 dark:text-white md:text-lg text-center md:text-left">
                 Stay ahead with the latest tech trends and innovations.

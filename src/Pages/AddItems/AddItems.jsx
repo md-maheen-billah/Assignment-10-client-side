@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { Typewriter } from "react-simple-typewriter";
 
 const AddItems = () => {
   const { user } = useContext(AuthContext);
@@ -53,7 +54,19 @@ const AddItems = () => {
   return (
     <div className="mt-4 mb-8 lg:w-[800px] mx-auto lg:my-8 px-2 lg:px-0">
       <h2 className="text-center text-2xl lg:text-4xl font-bold text-primary animate__animated animate__headShake  animate__slow animate__infinite">
-        Add Item
+        Add Item{" "}
+        <span style={{ color: "red", fontWeight: "bold" }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={["Landscape", "Portrait", "Watercolour", "Oil"]}
+            loop={5}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
       </h2>
       <form onSubmit={handleAddItem} className="mt-4 space-y-3">
         <div className="flex flex-col lg:flex-row lg:gap-8 gap-3">
