@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { FaStar } from "react-icons/fa";
+import "animate.css";
 
 const CraftItemCard = ({ item }) => {
   useEffect(() => {
@@ -23,7 +25,7 @@ const CraftItemCard = ({ item }) => {
         </div>
         <div className="bg-[#1e1b4b] rounded-b-lg px-2 py-4 lg:p-4">
           <div className="px-4 space-y-4">
-            <h2 className="text-[#f9a06f] truncate max-w-[250px] text-xl font-semibold animate__animated animate__headShake  animate__slow animate__infinite">
+            <h2 className="text-[#f9a06f] truncate max-w-[250px] text-xl font-semibold ">
               {item.item_name}
             </h2>
             <div className="flex flex-col gap-2 ">
@@ -39,12 +41,15 @@ const CraftItemCard = ({ item }) => {
                   {item.customization}
                 </span>
               </p>
-              <p className="text-[#f9a06f] font-semibold truncate max-w-[250px] text-sm">
+              <div className="text-[#f9a06f] flex items-center gap-1 font-semibold truncate max-w-[250px] text-sm">
                 Rating:{" "}
-                <span className="text-[#fff4ed] font-normal">
-                  {item.rating}
-                </span>
-              </p>
+                <div className="flex items-center gap-1">
+                  <FaStar className="text-[#fff4ed] " />
+                  <span className="text-[#fff4ed] font-normal">
+                    {item.rating}
+                  </span>
+                </div>
+              </div>
             </div>
             <div className="flex justify-between items-center">
               <p className="text-[#f9a06f]  2xl:text-4xl lg:text-xl text-3xl font-semibold">
@@ -53,7 +58,7 @@ const CraftItemCard = ({ item }) => {
             </div>
             <div className="flex justify-center">
               <Link to={`/itemdetails/${item._id}`}>
-                <button className="font-bold mt-8  rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">
+                <button className="font-bold mt-8 animate__animated animate__pulse animate__infinite  rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-0 hover:text-[#1e1b4b] duration-1000">
                   <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
                   <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
                   View Details

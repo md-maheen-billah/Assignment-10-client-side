@@ -55,7 +55,7 @@ const Banner = () => {
                 Stay inspired with the latest trends and innovations in
                 painting.
               </p>
-              <div className="flex justify-center mb-2">
+              <div className="flex justify-center lg:justify-start mb-2">
                 <a href="#items-s">
                   <button className="font-bold mt-6 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
                     <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
@@ -102,7 +102,7 @@ const Banner = () => {
                 Discover a diverse range of captivating paintings crafted by
                 talented artists.
               </p>
-              <div className="flex justify-center mb-2">
+              <div className="flex justify-center lg:justify-start mb-2">
                 <a href="#items-s">
                   <button className="font-bold mt-6 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
                     <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
@@ -148,7 +148,7 @@ const Banner = () => {
               <p className="font-medium text-black/60 dark:text-white md:text-lg text-center lg:text-left">
                 Stay ahead with the latest tech trends and innovations.
               </p>
-              <div className="flex justify-center mb-2">
+              <div className="flex justify-center lg:justify-start mb-2">
                 <a href="#items-s">
                   <button className="font-bold mt-6 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000">
                     <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>

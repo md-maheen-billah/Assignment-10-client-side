@@ -48,7 +48,7 @@ const Home = () => {
             </div>
             <div id="items-s">
               <div className="bg-[#f9a06f]">
-                <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+                <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#1e1b4b] ">
                   <Bounce>Craft Items Section</Bounce>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-4 lg:mt-10 px-2 lg:px-6">
@@ -74,7 +74,7 @@ const Home = () => {
               ></path>
             </svg>
             <div className=" mb-4">
-              <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+              <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b]">
                 <Bounce> Art & Craft Categories</Bounce>
               </h2>
               <Categories></Categories>

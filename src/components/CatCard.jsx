@@ -21,6 +21,9 @@ const CatCard = ({ item }) => {
         >
           <div>
             <p className="text-gray-200">{item.subcategory_Name}</p>
+            <p className="text-gray-300 hidden md:flex justify-center mt-2 text-xs font-light ">
+              {item.details}
+            </p>
           </div>
         </div>
       </Link>

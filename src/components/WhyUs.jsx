@@ -16,7 +16,7 @@ const WhyUs = () => {
     <div data-aos="fade-up">
       <div>
         <div className="text-center lg:mt-20 mt-8">
-          <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+          <h2 className="text-center text-2xl lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b]  ">
             <Bounce> Why Us?</Bounce>
           </h2>
         </div>

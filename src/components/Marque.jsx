@@ -11,7 +11,7 @@ const Marque = () => {
   }, []);
   return (
     <div data-aos="fade-up" className="mt-4 lg:mt-10">
-      <h2 className="text-center text-2xl lg:mb-6 lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b] animate__animated animate__headShake  animate__slow animate__infinite">
+      <h2 className="text-center text-2xl lg:mb-6 lg:text-4xl font-bold dark:text-[#f9a06f] text-[#1e1b4b]">
         <Bounce> Users Feedback</Bounce>
       </h2>
       <Marquee>

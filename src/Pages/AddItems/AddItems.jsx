@@ -67,7 +67,7 @@ const AddItems = () => {
         <title>Add Craft Item</title>
       </Helmet>
       <Bounce>
-        <h2 className="text-center text-2xl lg:text-4xl font-bold text-primary animate__animated animate__headShake  animate__slow animate__infinite">
+        <h2 className="text-center text-2xl lg:text-4xl font-bold text-primary">
           Add Item
         </h2>
       </Bounce>
@@ -279,7 +279,7 @@ const AddItems = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="font-bold mt-4 rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
+            className="font-bold mt-4 animate__animated animate__pulse animate__infinite rounded-md px-4 py-2 bg-[#f9a06f] text-[#1e1b4b] relative overflow-hidden group z-10 hover:text-[#1e1b4b] duration-1000"
           >
             <span className="absolute bg-[#ffede2]  size-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
             <span className="absolute bg-[#fac0a1] size-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>

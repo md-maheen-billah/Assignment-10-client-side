@@ -76,7 +76,7 @@ const MyList = () => {
       </Helmet>
       {(loading && <Spinner />) || (
         <div className="mt-4 mb-8 lg:my-8 px-2 lg:px-0">
-          <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] animate__animated animate__headShake  animate__slow animate__infinite">
+          <h2 className="text-center text-2xl lg:text-4xl font-bold text-[#f9a06f] ">
             <Bounce>My Art & Craft List</Bounce>
           </h2>
           <div className="flex justify-center lg:mt-8 mt-6 mx-2 lg:mx-0 ">

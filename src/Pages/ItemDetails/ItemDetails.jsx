@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../../components/Spinner.jsx";
 import { Bounce } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
+import { FaStar } from "react-icons/fa";
 
 const ItemDetails = () => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const ItemDetails = () => {
           <div className=" lg:w-6/12 p-4 lg:p-5">
             <div className="px-4 space-y-4">
               <Bounce>
-                <h2 className="text-[#f9a06f] font-semibold  text-xl lg:text-3xl animate__animated animate__headShake  animate__slow animate__infinite">
+                <h2 className="text-[#f9a06f] font-semibold  text-xl lg:text-3xl">
                   {product.item_name}
                 </h2>
               </Bounce>
@@ -57,12 +58,15 @@ const ItemDetails = () => {
                 </span>
               </p>
               <div className="flex flex-col lg:flex-row item gap-4 lg:gap-6">
-                <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
+                <div className="text-[#f9a06f] flex items-center gap-1 font-semibold xl:text-base text-sm">
                   Rating:{" "}
-                  <span className="text-[#1e1b4b] dark:text-white font-normal">
-                    {product.rating}
-                  </span>
-                </p>
+                  <div className="flex items-center gap-1">
+                    <FaStar className="text-[#1e1b4b] dark:text-white text-sm" />
+                    <span className="text-[#1e1b4b] dark:text-white font-normal">
+                      {product.rating}
+                    </span>
+                  </div>
+                </div>
                 <p className="text-[#f9a06f] font-semibold xl:text-base text-sm">
                   Processing Time:{" "}
                   <span className="text-[#1e1b4b] dark:text-white font-normal">

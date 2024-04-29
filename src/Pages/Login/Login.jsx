@@ -65,7 +65,7 @@ const Login = () => {
   return (
     <div
       data-aos="fade-up"
-      className="flex justify-center items-center px-2 mt-8 mb-8 lg:my-16 animate__animated animate__fadeInDownBig"
+      className="flex justify-center items-center px-2 mt-8 mb-8 lg:my-16 "
     >
       <Helmet>
         <title>Login</title>
@@ -74,7 +74,7 @@ const Login = () => {
         <div className="bg-[#f9a06f] shadow-xl py-5 px-8 rounded-xl">
           <Bounce>
             {" "}
-            <h2 className="text-center text-2xl font-bold text-[#ffede2] animate__animated animate__headShake  animate__slow animate__infinite">
+            <h2 className="text-center text-2xl font-bold text-[#ffede2] ">
               Login Your Account
             </h2>
           </Bounce>
